@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PortfolioApp.Models;
 
 namespace PortfolioApp
 {
@@ -18,6 +20,11 @@ namespace PortfolioApp
 
         public void ConfigureServices(IServiceCollection services)
         {
+            string connectionString = "Data Source=DESKTOP-RV4PASN;Initial Catalog=Portfolio;Integrated Security=True;Trusted_Connection=True;";
+            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connectionString));
+
+            services.AddControllers();
+
             services.AddControllersWithViews();
             services.AddSpaStaticFiles(configuration =>
             {
@@ -39,6 +46,7 @@ namespace PortfolioApp
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
             if (!env.IsDevelopment())
             {
                 app.UseSpaStaticFiles();
