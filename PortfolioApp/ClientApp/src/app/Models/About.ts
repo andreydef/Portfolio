@@ -10,6 +10,5 @@ export class About {
     public job?: string,
     public website?: string,
     public email?: string,
-    public skills_desc?: string,
-    public skill_key?: number) { }
+    public skills_desc?: string) { }
 }
