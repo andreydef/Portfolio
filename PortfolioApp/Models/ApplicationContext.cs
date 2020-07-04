@@ -23,7 +23,6 @@ namespace PortfolioApp.Models
         public DbSet<Info_jobs> Info_jobs { get; set; }
         public DbSet<Contact_me> Contact_me { get; set; }
         public DbSet<Contact_info> Contact_info { get; set; }
-        public DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -118,7 +117,7 @@ namespace PortfolioApp.Models
                     Date_finish = new DateTime(2019, 04, 15),
                     Title_job = "Super Cool Agency",
                     Description = "Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt."
-                },
+                }
             });
             modelBuilder.Entity<Education>().HasData(new Education[]
             {
@@ -139,7 +138,7 @@ namespace PortfolioApp.Models
                     Date_finish = new DateTime(2019, 05, 04),
                     Title_place = "University of Life",
                     Description = "Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt."
-                },
+                }
             });
             modelBuilder.Entity<Main_info>().HasData(new Main_info[]
             {
@@ -203,7 +202,7 @@ namespace PortfolioApp.Models
                     Id = 3,
                     Numbers = 200,
                     Title = "AWARDS RECEIVED"
-                },
+                }
             });
             modelBuilder.Entity<Contact_me>().HasData(new Contact_me[]
             {
@@ -249,25 +248,6 @@ namespace PortfolioApp.Models
                     Link_github = "https://github.com/andreydef",
                     Link_instagram = "https://www.instagram.com/_andriy_halelyuka_/",
                     Link_twitter = "https://twitter.com/Andriy346"
-                }
-            });
-            modelBuilder.Entity<User>().HasData(new User[]
-            {
-                new User
-                {
-                    Id = 1,
-                    UserName = "anreydef",
-                    FirstName = "Andriy",
-                    Password = "a30072001",
-                    UserType = "User"
-                },
-                new User
-                {
-                    Id = 2,
-                    UserName = "admin",
-                    FirstName = "danger",
-                    Password = "pass",
-                    UserType = "Admin"
                 }
             });
         }

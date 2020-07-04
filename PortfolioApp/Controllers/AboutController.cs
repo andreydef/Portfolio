@@ -6,8 +6,8 @@ using System.Linq;
 
 namespace PortfolioApp.Controllers
 {
-    [ApiController]
     [Route("api/about")]
+    [ApiController]
     public class AboutController : Controller
     {
         ApplicationContext db;
@@ -54,18 +54,6 @@ namespace PortfolioApp.Controllers
             return about;
         }
 
-        [HttpPost]
-        public IActionResult Post(About about)
-        {
-            if (ModelState.IsValid)
-            {
-                db.About.Add(about);
-                db.SaveChanges();
-                return Ok(about);
-            }
-            return BadRequest(ModelState);
-        }
-
         [HttpPut]
         public IActionResult Put(About about)
         {
@@ -78,17 +66,29 @@ namespace PortfolioApp.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
-        {
-            About about = db.About.FirstOrDefault(x => x.Id == id);
+        //[HttpPost]
+        //public IActionResult Post(About about)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.About.Add(about);
+        //        db.SaveChanges();
+        //        return Ok(about);
+        //    }
+        //    return BadRequest(ModelState);
+        //}
 
-            if (about != null)
-            {
-                db.About.Remove(about);
-                db.SaveChanges();
-            }
-            return Ok(about);
-        }
+        //[HttpDelete("{id}")]
+        //public IActionResult Delete(int id)
+        //{
+        //    About about = db.About.FirstOrDefault(x => x.Id == id);
+
+        //    if (about != null)
+        //    {
+        //        db.About.Remove(about);
+        //        db.SaveChanges();
+        //    }
+        //    return Ok(about);
+        //}
     }
 }

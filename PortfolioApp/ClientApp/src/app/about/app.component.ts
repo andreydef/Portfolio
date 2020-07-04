@@ -24,20 +24,20 @@ export class AboutComponent implements OnInit {
     this.loadAbouts(); // download data before the start of server
   }
 
-  cancel() {
-    this.about = new About();
-  }
+  // cancel() {
+  //   this.about = new About();
+  // }
 
   // save data
-  save() {
-    if (this.about.id != null) {
-      this.aboutService.updateAbout(this.about)
-        .subscribe((data => this.loadAbouts()));
-    }
-    this.cancel();
-  }
+  // save() {
+  //   if (this.about.id != null) {
+  //     this.aboutService.updateAbout(this.about)
+  //       .subscribe((data => this.loadAbouts()));
+  //   }
+  //   this.cancel();
+  // }
 
-  editAbout(a: About) {
-    this.about = a;
-  }
+  // editAbout(a: About) {
+  //   this.about = a;
+  // }
 }

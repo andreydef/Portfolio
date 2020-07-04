@@ -1,0 +1,17 @@
+<h1>Список Resumes</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Title</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of resumes">
+            <ng-template [ngIf]="resume?.id != a.id">
+                <td>{{a?.title}}</td>
+                <td>{{a?.description}}</td>
+            </ng-template>
+        </tr>
+    </tbody>
+</table>

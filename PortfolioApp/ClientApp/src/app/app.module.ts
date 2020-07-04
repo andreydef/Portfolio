@@ -9,6 +9,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/app.component';
 import { LoginComponent } from './Services/login/login.component';
+import { ResumeComponent } from './resume/resume.component';
 // import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { LoginComponent } from './Services/login/login.component';
     NavMenuComponent,
     HomeComponent,
     AboutComponent,
-    LoginComponent
+    LoginComponent,
+    ResumeComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -26,8 +28,9 @@ import { LoginComponent } from './Services/login/login.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'about', component: AboutComponent },
-      { path: 'login', component: LoginComponent },
+      { path: 'login', component: LoginComponent }
+      // { path: 'about', component: AboutComponent },
+      // { path: 'resume', component: ResumeComponent},
       // { path: 'user-home', component: UserHomeComponent, canActivate: [AuthGuard] },
       // { path: 'admin-home', component: AdminHomeComponent, canActivate: [AuthGuard] }
     ])

@@ -1,23 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { About } from '../../Models/Main_models/About';
+import { Resume } from '../../Models/Main_models/Resume';
 
 @Injectable()
-export class AboutService {
+export class ResumeService {
 
-  private url = 'api/about';
+  private url = 'api/resume';
 
   constructor(private http: HttpClient) { }
 
-  getAbouts() {
+  getResumes() {
     return this.http.get(this.url);
   }
 
-  getAbout(id: number) {
+  getResume(id: number) {
     return this.http.get(this.url + '/' + id);
   }
 
-  updateAbout(about: About) {
-    return this.http.put(this.url, about);
+  updateResume(resume: Resume) {
+    return this.http.put(this.url, resume);
   }
+
 }

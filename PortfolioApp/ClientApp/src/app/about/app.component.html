@@ -27,9 +27,9 @@
                 <td>{{a?.website}}</td>
                 <td>{{a?.email}}</td>
                 <td>{{a?.skills_desc}}</td>
-                <td>
+                <!-- <td>
                     <button class="btn btn-primary" (click)="editAbout(a)">Змінити</button>
-                </td>
+                </td> -->
             </ng-template>
         </tr>
     </tbody>
@@ -67,8 +67,8 @@
     <td>
         <input type="text" [(ngModel)]="about.skills_desc" class="form-control" />
     </td>
-    <td>
+    <!-- <td>
         <input type="button" value="Save" (click)="save()" class="btn btn-sm btn-success" />
         <input type="button" value="Cancel" (click)="cancel()" class="btn btn-sm btn-warning" />
-    </td>
+    </td> -->
 </ng-template>

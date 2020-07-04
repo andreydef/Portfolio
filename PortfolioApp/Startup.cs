@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using PortfolioApp.Models;
 using System;
 using System.Text;
@@ -59,6 +60,13 @@ namespace PortfolioApp
                 config.AddPolicy(Roles.Admin, Roles.AdminPolicy());
                 config.AddPolicy(Roles.User, Roles.UserPolicy());
             });
+
+            // add Swagger
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1",
+                    new OpenApiInfo { Title="Portfolio API", Version = "v1.0.0" });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -92,6 +100,13 @@ namespace PortfolioApp
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
+            });
+
+            // add Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Portfolio API");
             });
 
             app.UseSpa(spa =>
