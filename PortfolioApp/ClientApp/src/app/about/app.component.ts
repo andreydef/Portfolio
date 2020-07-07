@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AboutService } from '../Services/About/about.service';
+import { AboutService } from '../Services/about/about.service';
 import { About } from '../Models/Main_models/About';
 
 @Component({
