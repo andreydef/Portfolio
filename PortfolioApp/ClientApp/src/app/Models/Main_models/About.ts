@@ -1,3 +1,5 @@
+import { DatePipe } from '@angular/common';
+
 export class About {
   constructor(
     public id?: number,
@@ -6,7 +8,7 @@ export class About {
     public description?: string,
     public profile_desc?: string,
     public fullname?: string,
-    public birth_date?: string,
+    public birth_date?: DatePipe,
     public job?: string,
     public website?: string,
     public email?: string,

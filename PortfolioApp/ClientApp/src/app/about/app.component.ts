@@ -5,6 +5,7 @@ import { About } from '../Models/Main_models/About';
 @Component({
   selector: 'app-about',
   templateUrl: '../about/app.component.html',
+  styleUrls: ['../about/app.component.css'],
   providers: [ AboutService ]
 })
 export class AboutComponent implements OnInit {

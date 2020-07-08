@@ -1,0 +1,156 @@
+@import url("../../assets/css/base.css");
+@import url("../../assets/css/main.css");
+
+/**
+ * ===================================================================
+ * 11. about
+ *
+ * -------------------------------------------------------------------
+ */
+
+#about {
+    background: #FFFFFF;
+    padding-top: 12rem;
+    padding-bottom: 15rem;
+}
+
+#about .section-intro {
+    margin-bottom: 3rem;
+}
+
+.intro-info {
+    margin-top: 4.2rem;
+    margin-right: -30px;
+    margin-left: -30px;
+}
+
+.intro-info img {
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+    margin: .9rem 0 0 0;
+    float: left;
+}
+
+.intro-info .lead {
+    text-align: left;
+    padding-left: 13rem;
+}
+
+.about-content {
+    position: relative;
+    text-align: left;
+    max-width: 850px;
+    margin-bottom: 3.6rem;
+}
+
+.about-content h3 {
+    font-family: "poppins-bold", sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+}
+
+.about-content .info-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.about-content .info-list li {
+    padding: 0 0 1.5rem 0;
+    margin-bottom: .6rem;
+}
+
+.about-content .info-list li strong {
+    font-family: "poppins-bold", sans-serif;
+    color: #313131;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.about-content .info-list li span {
+    display: block;
+    font-family: "poppins-regular", sans-serif;
+    color: #888888;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.about-content .skill-bars {
+    margin-top: 6rem;
+}
+
+.button-section {
+    text-align: center;
+}
+
+.button-section .button {
+    width: 250px;
+}
+
+.button-section [class*="col-"] .button:first-child {
+    margin-right: 4rem;
+}
+
+.tab-full p {
+    font-size: 1.7rem !important;
+    line-height: 3rem !important;
+    color: #6E6E6E !important;
+}
+
+
+/**
+* responsive:
+* about
+* -------------------------------------------------------------------
+*/
+
+@media only screen and (max-width:1024px) {
+    .intro-info {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .intro-info img {
+        height: 7.8rem;
+        width: 7.8rem;
+    }
+    .intro-info .lead {
+        padding-left: 11rem;
+    }
+    .about-content h3 {
+        text-align: center;
+    }
+    .about-content .info-list,
+    .about-content .skill-bars {
+        margin-bottom: 4.2rem;
+    }
+    .button-section .button {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .button-section [class*="col-"] .button:first-child {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .intro-info {
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .intro-info img {
+        height: 6.6rem;
+        width: 6.6rem;
+        float: none;
+        display: inline-block;
+    }
+    .intro-info .lead {
+        padding-left: 0;
+        text-align: center;
+    }
+}
