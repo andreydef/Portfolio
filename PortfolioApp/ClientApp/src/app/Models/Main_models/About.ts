@@ -7,7 +7,7 @@ export class About {
     public imageName?: string,
     public description?: string,
     public profile_desc?: string,
-    public fullname?: string,
+    public fullName?: string,
     public birth_date?: DatePipe,
     public job?: string,
     public website?: string,

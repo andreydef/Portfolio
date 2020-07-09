@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { WorkExperience } from '../../Models/Main_models/Work_experience';
+import { WorkExperience } from '../../../Models/Main_models/Work_experience';
 
 @Injectable()
 export class WorkExperienceService {

@@ -1,0 +1,28 @@
+<div class="row resume-timeline">
+    <div class="col-twelve resume-header">
+        <h2>Education</h2>
+    </div>
+    <!-- /resume-header -->
+
+    <div class="col-twelve" *ngFor="let e of educations">
+        <div class="timeline-wrap">
+            <div class="timeline-block">
+                <div class="timeline-ico">
+                    <i class="fa fa-briefcase"></i>
+                </div>
+                <div class="timeline-header">
+                    <h3>{{e?.name_education}}</h3>
+                    <p>{{e?.date_start | date: 'MMM dd'}} - {{e?.date_finish | date: 'MMM dd'}}</p>
+                </div>
+                <div class="timeline-content">
+                    <h4>{{e?.title_place}}</h4>
+                    <p>{{e?.description}}</p>
+                </div>
+            </div>
+            <!-- /timeline-block -->
+        </div>
+        <!-- /timeline-wrap -->
+    </div>
+    <!-- /col-twelve -->
+</div>
+<!-- /resume-timeline -->

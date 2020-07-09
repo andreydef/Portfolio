@@ -1,17 +1,19 @@
-<h1>Список Resumes</h1>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <td>Title</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let a of resumes">
-            <ng-template [ngIf]="resume?.id != a.id">
-                <td>{{a?.title}}</td>
-                <td>{{a?.description}}</td>
-            </ng-template>
-        </tr>
-    </tbody>
-</table>
+<!-- resume Section
+================================================== -->
+
+<section id="resume" class="grey-section" *ngFor="let r of resumes">
+
+    <div class="row section-intro">
+        <div class="col-twelve">
+            <h5>Resume</h5>
+            <h1>{{r?.title}}</h1>
+            <p class="lead">{{r?.description}}</p>
+        </div>
+    </div>
+    <!-- /section-intro-->
+
+    <app-work-experience></app-work-experience>
+    <app-education></app-education>
+
+</section>
+<!-- /features -->

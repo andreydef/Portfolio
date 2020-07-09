@@ -1,0 +1,28 @@
+<div class="row resume-timeline">
+    <div class="col-twelve resume-header">
+        <h2>Work Experience</h2>
+    </div>
+    <!-- /resume-header -->
+
+    <div class="col-twelve" *ngFor="let w of works">
+        <div class="timeline-wrap">
+            <div class="timeline-block">
+                <div class="timeline-ico">
+                    <i class="fa fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-header">
+                    <h3>{{w?.name_job}}</h3>
+                    <p>{{w?.date_start | date: 'MMM dd'}} - {{w?.date_finish | date: 'MMM dd'}}</p>
+                </div>
+                <div class="timeline-content">
+                    <h4>{{w?.title_job}}</h4>
+                    <p>{{w?.description}}</p>
+                </div>
+            </div>
+            <!-- /timeline-block -->
+        </div>
+        <!-- /timeline-wrap -->
+    </div>
+    <!-- /col-twelve -->
+</div>
+<!-- /resume-timeline -->
