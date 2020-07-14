@@ -10,8 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/app.component';
 import { LoginComponent } from './Services/login/login.component';
 import { ResumeComponent } from './resume/resume.component';
-import { WorkExperienceComponent } from './resume/work-experience/work-experience.component';
-import { EducationComponent } from './resume/education/education.component';
+import { WorkExperienceComponent } from './work-experience/work-experience.component';
+import { EducationComponent } from './education/education.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ServicesBlockComponent } from './services-block/services-block.component';
 // import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
@@ -24,6 +26,8 @@ import { EducationComponent } from './resume/education/education.component';
     ResumeComponent,
     WorkExperienceComponent,
     EducationComponent,
+    PortfolioComponent,
+    ServicesBlockComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

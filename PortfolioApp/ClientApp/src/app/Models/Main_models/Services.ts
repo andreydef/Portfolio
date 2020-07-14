@@ -5,5 +5,5 @@ export class Services {
     public short_desc?: string,
     public imageName?: string,
     public title_service?: string,
-    public ddescription?: string) {}
+    public description?: string) {}
 }

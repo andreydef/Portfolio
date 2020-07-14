@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EducationService } from '../../Services/resume/education/education.service';
-import { Education } from '../../Models/Main_models/Education';
+import { EducationService } from '../Services/resume/education/education.service';
+import { Education } from '../Models/Main_models/Education';
 
 @Component({
   selector: 'app-education',
