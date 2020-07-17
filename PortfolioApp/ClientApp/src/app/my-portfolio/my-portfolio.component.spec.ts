@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ServicesBlockComponent } from './services-block.component';
+import { MyPortfolioComponent } from './my-portfolio.component';
 
-describe('ServicesBlockComponent', () => {
-  let component: ServicesBlockComponent;
-  let fixture: ComponentFixture<ServicesBlockComponent>;
+describe('MyPortfolioComponent', () => {
+  let component: MyPortfolioComponent;
+  let fixture: ComponentFixture<MyPortfolioComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ServicesBlockComponent ]
+      declarations: [ MyPortfolioComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ServicesBlockComponent);
+    fixture = TestBed.createComponent(MyPortfolioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

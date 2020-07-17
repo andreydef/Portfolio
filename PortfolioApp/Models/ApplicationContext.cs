@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using PortfolioApp.Models.Main_models;
 
 namespace PortfolioApp.Models
 {
@@ -23,6 +24,7 @@ namespace PortfolioApp.Models
         public DbSet<Info_jobs> Info_jobs { get; set; }
         public DbSet<Contact_me> Contact_me { get; set; }
         public DbSet<Contact_info> Contact_info { get; set; }
+        public DbSet<Portfolio> Portfolio { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -248,6 +250,15 @@ namespace PortfolioApp.Models
                     Link_github = "https://github.com/andreydef",
                     Link_instagram = "https://www.instagram.com/_andriy_halelyuka_/",
                     Link_twitter = "https://twitter.com/Andriy346"
+                }
+            });
+            modelBuilder.Entity<Portfolio>().HasData(new Portfolio[]
+            {
+                new Portfolio
+                {
+                    Id = 1, 
+                    Title = "Check Out Some of My Works.",
+                    Description = "Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do."
                 }
             });
         }

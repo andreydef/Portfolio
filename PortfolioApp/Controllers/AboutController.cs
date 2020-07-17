@@ -31,8 +31,7 @@ namespace PortfolioApp.Controllers
                         Website = "www.kardswebsite.com",
                         Email = "me@kardswebsite.com",
                         Skills_desc = "Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum."
-                    }
-                    );
+                    });
                 db.SaveChanges();
             }
             else

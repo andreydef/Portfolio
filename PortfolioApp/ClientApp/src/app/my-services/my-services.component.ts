@@ -1,21 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicesService } from '../Services/services/services.service';
 import { Services } from '../Models/Main_models/Services';
+
 @Component({
-  selector: 'app-services-block',
-  templateUrl: './services-block.component.html',
-  styleUrls: ['./services-block.component.css'],
+  selector: 'app-my-services',
+  templateUrl: './my-services.component.html',
+  styleUrls: ['./my-services.component.css'],
   providers: [ ServicesService ]
 })
-export class ServicesBlockComponent implements OnInit {
+export class MyServicesComponent implements OnInit {
 
   service: Services = new Services();
   services: Services[];
 
-  constructor(private serviceService: ServicesService) { }
+  constructor(private servicesService: ServicesService) { }
 
   loadServices() {
-    this.serviceService.getServices()
+    this.servicesService.getServices()
       .subscribe((data: Services[]) => this.services = data);
   }
 

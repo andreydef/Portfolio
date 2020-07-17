@@ -12,8 +12,8 @@ import { LoginComponent } from './Services/login/login.component';
 import { ResumeComponent } from './resume/resume.component';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
 import { EducationComponent } from './education/education.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ServicesBlockComponent } from './services-block/services-block.component';
+import { MyPortfolioComponent } from './my-portfolio/my-portfolio.component';
+import { MyServicesComponent } from './my-services/my-services.component';
 // import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
@@ -26,8 +26,8 @@ import { ServicesBlockComponent } from './services-block/services-block.componen
     ResumeComponent,
     WorkExperienceComponent,
     EducationComponent,
-    PortfolioComponent,
-    ServicesBlockComponent,
+    MyPortfolioComponent,
+    MyServicesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -44,6 +44,6 @@ import { ServicesBlockComponent } from './services-block/services-block.componen
     ])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

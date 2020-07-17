@@ -17,7 +17,7 @@ export class ServicesService {
     return this.http.get(this.url + '/' + id);
   }
 
-  updateResume(service: Services) {
+  updateService(service: Services) {
     return this.http.put(this.url, service);
   }
 

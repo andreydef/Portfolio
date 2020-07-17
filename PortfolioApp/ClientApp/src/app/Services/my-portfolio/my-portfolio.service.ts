@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Projects } from '../../Models/Main_models/Projects';
+import { Portfolio } from '../../Models/Main_models/Portfolio';
 
 @Injectable()
-export class PortfolioService {
+export class MyPortfolioService {
 
-  private url = 'api/project';
+  private url = 'api/portfolio';
 
   constructor(private http: HttpClient) { }
 
@@ -17,8 +17,7 @@ export class PortfolioService {
     return this.http.get(this.url + '/' + id);
   }
 
-  updateResume(portfolio: Projects) {
+  updatePortfolio(portfolio: Portfolio) {
     return this.http.put(this.url, portfolio);
   }
-
 }
