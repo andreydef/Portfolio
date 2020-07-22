@@ -1,132 +1,30 @@
 <!-- services Section
    ================================================== -->
 <section id="services" *ngFor="let s of services">
-
     <div class="overlay"></div>
-
     <div class="row section-intro">
         <div class="col-twelve">
-
             <h5>Services</h5>
             <h1>{{s?.title}}</h1>
-
             <p class="lead">{{s?.short_desc}}</p>
-
         </div>
     </div>
     <!-- /section-intro -->
 
-    <div class="row services-content">
+    <!-- Add service owl-slider -->
+    <!-- <div id="owl-slider" class="owl-carousel services-list"> -->
 
-        <div id="owl-slider" class="owl-carousel services-list">
-
-            <div class="service">
-
-                <span class="icon"><i class="icon-earth"></i></span>
-
-                <div class="service-content">
-
-                    <h3>Webdesign</h3>
-
-                    <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                    </p>
-
-                </div>
-
+    <div class="row services-content" *ngFor="let info of service_infos">
+        <div class="service">
+            <!-- Add image to service-info items -->
+            <span class="icon"><i class="icon-earth"></i></span>
+            <div class="service-content">
+                <h3>{{info?.title}}</h3>
+                <p class="desc">{{info?.description}}</p>
             </div>
-            <!-- /service -->
-
-            <div class="service">
-
-                <span class="icon"><i class="icon-window"></i></span>
-
-                <div class="service-content">
-
-                    <h3>Web Development</h3>
-
-                    <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                    </p>
-
-                </div>
-
-            </div>
-            <!-- /service -->
-
-            <div class="service">
-
-                <span class="icon"><i class="icon-paint-brush"></i></span>
-
-                <div class="service-content">
-
-                    <h3>Branding</h3>
-
-                    <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                    </p>
-
-                </div>
-
-            </div>
-            <!-- /service -->
-
-            <div class="service">
-
-                <span class="icon"><i class="icon-toggles"></i></span>
-
-                <div class="service-content">
-
-                    <h3>UI/UX Design</h3>
-
-                    <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                    </p>
-
-                </div>
-
-            </div>
-            <!-- /service -->
-
-            <div class="service">
-
-                <span class="icon"><i class="icon-image"></i></span>
-
-                <div class="service-content">
-
-                    <h3>Graphics Design</h3>
-
-                    <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                    </p>
-
-                </div>
-
-            </div>
-            <!-- /service -->
-
-            <div class="service">
-
-                <span class="icon"><i class="icon-chat"></i></span>
-
-                <div class="service-content">
-
-                    <h3>Consultancy</h3>
-
-                    <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                    </p>
-
-                </div>
-
-            </div>
-            <!-- /service -->
-
         </div>
-        <!-- /services-list -->
-
+        <!-- /service -->
     </div>
     <!-- /services-content -->
-
 </section>
 <!-- /services -->

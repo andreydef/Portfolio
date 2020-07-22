@@ -6,6 +6,7 @@ export class Projects {
     public title?: string,
     public description?: string,
     public name_project?: string,
+    public desc_proj?: string,
     public date_project?: DatePipe,
     public imageName?: string) {}
 }

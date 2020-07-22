@@ -25,6 +25,7 @@ namespace PortfolioApp.Models
         public DbSet<Contact_me> Contact_me { get; set; }
         public DbSet<Contact_info> Contact_info { get; set; }
         public DbSet<Portfolio> Portfolio { get; set; }
+        public DbSet<Service_info> Service_info { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -259,6 +260,30 @@ namespace PortfolioApp.Models
                     Id = 1, 
                     Title = "Check Out Some of My Works.",
                     Description = "Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do."
+                }
+            });
+            modelBuilder.Entity<Service_info>().HasData(new Service_info[]
+            {
+                new Service_info
+                {
+                    Id = 1,
+                    ImageName = "",
+                    Title = "Webdesign",
+                    Description = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsamvoluptatem quia voluptas sit aspernatur aut odit aut fugit."
+                },
+                new Service_info
+                {
+                    Id = 2,
+                    ImageName = "",
+                    Title = "Web Development",
+                    Description = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsamvoluptatem quia voluptas sit aspernatur aut odit aut fugit."
+                },
+                new Service_info
+                {
+                    Id = 3,
+                    ImageName = "",
+                    Title = "Branding",
+                    Description = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsamvoluptatem quia voluptas sit aspernatur aut odit aut fugit."
                 }
             });
         }
