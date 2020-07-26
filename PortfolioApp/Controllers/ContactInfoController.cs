@@ -23,32 +23,22 @@ namespace PortfolioApp.Controllers
                         Id = 1,
                         Title = "WHERE TO FIND ME",
                         Short_desc = "1600 Amphitheatre Parkway Mountain View, CA 94043 US",
-                        Link_facebook = "https://www.facebook.com/profile.php?id=100009036657512",
-                        Link_github = "https://github.com/andreydef",
-                        Link_instagram = "https://www.instagram.com/_andriy_halelyuka_/",
-                        Link_twitter = "https://twitter.com/Andriy346"
+                        ImageName = "https://image.flaticon.com/icons/svg/126/126470.svg"
                     },
                     new Contact_info
                     {
                         Id = 2,
                         Title = "EMAIL ME AT",
                         Short_desc = "someone@kardswebsite.com info@kardswebsite.com",
-                        Link_facebook = "https://www.facebook.com/profile.php?id=100009036657512",
-                        Link_github = "https://github.com/andreydef",
-                        Link_instagram = "https://www.instagram.com/_andriy_halelyuka_/",
-                        Link_twitter = "https://twitter.com/Andriy346"
+                        ImageName = "https://image.flaticon.com/icons/svg/126/126470.svg"
                     },
                     new Contact_info
                     {
                         Id = 3,
                         Title = "CALL ME AT",
                         Short_desc = "Phone: (+63) 555 1212 Mobile: (+63) 555 0100 Fax: (+63) 555 0101",
-                        Link_facebook = "https://www.facebook.com/profile.php?id=100009036657512",
-                        Link_github = "https://github.com/andreydef",
-                        Link_instagram = "https://www.instagram.com/_andriy_halelyuka_/",
-                        Link_twitter = "https://twitter.com/Andriy346"
-                    }
-                    );
+                        ImageName = "https://image.flaticon.com/icons/svg/126/126470.svg"
+                    });
                 db.SaveChanges();
             }
             else

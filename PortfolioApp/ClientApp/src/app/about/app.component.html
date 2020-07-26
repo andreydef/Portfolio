@@ -45,26 +45,10 @@
         <div class="col-six tab-full">
             <h3>Skills</h3>
             <p>{{a?.skills_desc}}</p>
-            <ul class="skill-bars">
+            <ul class="skill-bars" *ngFor="let l of languages">
                 <li>
-                    <div class="progress percent90"><span>90%</span></div>
-                    <strong>HTML5</strong>
-                </li>
-                <li>
-                    <div class="progress percent85"><span>85%</span></div>
-                    <strong>CSS3</strong>
-                </li>
-                <li>
-                    <div class="progress percent70"><span>70%</span></div>
-                    <strong>JQuery</strong>
-                </li>
-                <li>
-                    <div class="progress percent95"><span>95%</span></div>
-                    <strong>PHP</strong>
-                </li>
-                <li>
-                    <div class="progress percent75"><span>75%</span></div>
-                    <strong>Wordpress</strong>
+                    <div class="progress percent{{l?.raiting}}"><span>{{l?.raiting}}</span></div>
+                    <strong>{{l?.title}}</strong>
                 </li>
             </ul>
             <!-- /skill-bars -->

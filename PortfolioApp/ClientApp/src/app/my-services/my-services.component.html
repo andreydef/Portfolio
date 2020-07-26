@@ -15,12 +15,14 @@
     <!-- <div id="owl-slider" class="owl-carousel services-list"> -->
 
     <div class="row services-content" *ngFor="let info of service_infos">
-        <div class="service">
+        <div class="service" style="color: white;">
+            <!-- change style white !! -->
             <!-- Add image to service-info items -->
-            <span class="icon"><i class="icon-earth"></i></span>
+            <!-- <span class="icon"><i class="icon-earth"></i></span> -->
+            <img src="{{info?.imageName}}" alt="Service" width="54px" height="54px" style="background-color: white;">
             <div class="service-content">
-                <h3>{{info?.title}}</h3>
-                <p class="desc">{{info?.description}}</p>
+                <h3 style="color: white;">{{info?.title}}</h3>
+                <p style="color: white;" class="desc">{{info?.description}}</p>
             </div>
         </div>
         <!-- /service -->

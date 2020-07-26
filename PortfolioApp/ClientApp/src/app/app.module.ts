@@ -14,6 +14,9 @@ import { WorkExperienceComponent } from './work-experience/work-experience.compo
 import { EducationComponent } from './education/education.component';
 import { MyPortfolioComponent } from './my-portfolio/my-portfolio.component';
 import { MyServicesComponent } from './my-services/my-services.component';
+import { StatsComponent } from './stats/stats.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 // import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
@@ -27,7 +30,10 @@ import { MyServicesComponent } from './my-services/my-services.component';
     WorkExperienceComponent,
     EducationComponent,
     MyPortfolioComponent,
-    MyServicesComponent
+    MyServicesComponent,
+    StatsComponent,
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

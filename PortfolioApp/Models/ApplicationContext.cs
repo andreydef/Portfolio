@@ -5,7 +5,7 @@ using PortfolioApp.Models.Main_models;
 namespace PortfolioApp.Models
 {
     public class ApplicationContext : DbContext
-    { 
+    {
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
         {
@@ -26,10 +26,12 @@ namespace PortfolioApp.Models
         public DbSet<Contact_info> Contact_info { get; set; }
         public DbSet<Portfolio> Portfolio { get; set; }
         public DbSet<Service_info> Service_info { get; set; }
+        public DbSet<Stats> Stats { get; set; }
+        public DbSet<Links> Links { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<About>().HasData(new About[] 
+            modelBuilder.Entity<About>().HasData(new About[]
             {
                 new About
                 {
@@ -46,7 +48,7 @@ namespace PortfolioApp.Models
                     Skills_desc = "Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum."
                 }
             });
-            modelBuilder.Entity<Languages>().HasData(new Languages[] 
+            modelBuilder.Entity<Languages>().HasData(new Languages[]
             {
                 new Languages
                 {
@@ -152,7 +154,7 @@ namespace PortfolioApp.Models
                     Description = "Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.",
                 }
             });
-            modelBuilder.Entity<Projects>().HasData(new Projects[] 
+            modelBuilder.Entity<Projects>().HasData(new Projects[]
             {
                 new Projects
                 {
@@ -227,37 +229,28 @@ namespace PortfolioApp.Models
                     Id = 1,
                     Title = "WHERE TO FIND ME",
                     Short_desc = "1600 Amphitheatre Parkway Mountain View, CA 94043 US",
-                    Link_facebook = "https://www.facebook.com/profile.php?id=100009036657512",
-                    Link_github = "https://github.com/andreydef",
-                    Link_instagram = "https://www.instagram.com/_andriy_halelyuka_/",
-                    Link_twitter = "https://twitter.com/Andriy346"
+                    ImageName = "https://image.flaticon.com/icons/svg/126/126470.svg"
                 },
                 new Contact_info
                 {
                     Id = 2,
                     Title = "EMAIL ME AT",
                     Short_desc = "someone@kardswebsite.com info@kardswebsite.com",
-                    Link_facebook = "https://www.facebook.com/profile.php?id=100009036657512",
-                    Link_github = "https://github.com/andreydef",
-                    Link_instagram = "https://www.instagram.com/_andriy_halelyuka_/",
-                    Link_twitter = "https://twitter.com/Andriy346"
+                    ImageName = "https://image.flaticon.com/icons/svg/126/126470.svg"
                 },
                 new Contact_info
                 {
                     Id = 3,
                     Title = "CALL ME AT",
                     Short_desc = "Phone: (+63) 555 1212 Mobile: (+63) 555 0100 Fax: (+63) 555 0101",
-                    Link_facebook = "https://www.facebook.com/profile.php?id=100009036657512",
-                    Link_github = "https://github.com/andreydef",
-                    Link_instagram = "https://www.instagram.com/_andriy_halelyuka_/",
-                    Link_twitter = "https://twitter.com/Andriy346"
+                    ImageName = "https://image.flaticon.com/icons/svg/126/126470.svg"
                 }
             });
             modelBuilder.Entity<Portfolio>().HasData(new Portfolio[]
             {
                 new Portfolio
                 {
-                    Id = 1, 
+                    Id = 1,
                     Title = "Check Out Some of My Works.",
                     Description = "Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do."
                 }
@@ -284,6 +277,62 @@ namespace PortfolioApp.Models
                     ImageName = "",
                     Title = "Branding",
                     Description = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsamvoluptatem quia voluptas sit aspernatur aut odit aut fugit."
+                }
+            });
+            modelBuilder.Entity<Stats>().HasData(new Stats[]
+            {
+                new Stats
+                {
+                    Id = 1,
+                    ImageName = "https://image.flaticon.com/icons/svg/126/126486.svg",
+                    Count = 1500,
+                    Title = "Projects completed"
+                },
+                new Stats
+                {
+                    Id = 2,
+                    ImageName = "https://image.flaticon.com/icons/svg/126/126486.svg",
+                    Count = 900,
+                    Title = "Happy clients"
+                },
+                new Stats
+                {
+                    Id = 3,
+                    ImageName = "https://image.flaticon.com/icons/svg/126/126486.svg",
+                    Count = 200,
+                    Title = "Awards received"
+                },
+                new Stats
+                {
+                    Id = 4,
+                    ImageName = "https://image.flaticon.com/icons/svg/126/126486.svg",
+                    Count = 120,
+                    Title = "Crazy Ideas"
+                },
+                new Stats
+                {
+                    Id = 5,
+                    ImageName = "https://image.flaticon.com/icons/svg/126/126486.svg",
+                    Count = 1500,
+                    Title = "Cofee Cups"
+                },
+                new Stats
+                {
+                    Id = 6,
+                    ImageName = "https://image.flaticon.com/icons/svg/126/126486.svg",
+                    Count = 7200,
+                    Title = "Hours"
+                }
+            });
+            modelBuilder.Entity<Links>().HasData(new Links[]
+            { 
+                new Links
+                {
+                    Id = 1, 
+                    Link_facebook = "https://www.facebook.com/profile.php?id=100009036657512",
+                    Link_github = "https://github.com/andreydef",
+                    Link_twitter = "https://twitter.com/Andriy346",
+                    Link_instagram = "https://www.instagram.com/_andriy_halelyuka_/"
                 }
             });
         }
