@@ -2,10 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/app.component';
 import { LoginComponent } from './Services/login/login.component';
@@ -17,12 +15,14 @@ import { MyServicesComponent } from './my-services/my-services.component';
 import { StatsComponent } from './stats/stats.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProjectsComponent } from './projects/projects.component';
 // import { AuthGuard } from './guards/auth.guard';
+
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavMenuComponent,
     HomeComponent,
     AboutComponent,
     LoginComponent,
@@ -33,21 +33,15 @@ import { FooterComponent } from './footer/footer.component';
     MyServicesComponent,
     StatsComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'login', component: LoginComponent }
-      // { path: 'about', component: AboutComponent },
-      // { path: 'resume', component: ResumeComponent},
-      // { path: 'user-home', component: UserHomeComponent, canActivate: [AuthGuard] },
-      // { path: 'admin-home', component: AdminHomeComponent, canActivate: [AuthGuard] }
-    ])
+    routing
   ],
   providers: [],
   bootstrap: [ AppComponent ]
