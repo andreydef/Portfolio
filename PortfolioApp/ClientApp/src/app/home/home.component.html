@@ -1,3 +1,5 @@
+<app-nav-menu></app-nav-menu>
+
 <!-- intro section
 ================================================== -->
 <section id="intro">
@@ -17,10 +19,10 @@
     <!-- /intro-content -->
 
     <ul class="intro-social" *ngFor="let l of links">
-        <li><a href="{{l?.link_facebook}}"><i class="fa fa-facebook" style="font-style: normal !important;"></i></a></li>
-        <li><a href="{{l?.link_github}}"><i class="fa fa-github" style="font-style: normal !important;"></i></a></li>
-        <li><a href="{{l?.link_twitter}}"><i class="fa fa-twitter" style="font-style: normal !important;"></i></a></li>
-        <li><a href="{{l?.link_instagram}}"><i class="fa fa-instagram" style="font-style: normal !important;"></i></a></li>
+        <li><a href="{{l?.link_facebook}}" target="_blank"><i class="fa fa-facebook" style="font-style: normal !important;"></i></a></li>
+        <li><a href="{{l?.link_github}}" target="_blank"><i class="fa fa-github" style="font-style: normal !important;"></i></a></li>
+        <li><a href="{{l?.link_twitter}}" target="_blank"><i class="fa fa-twitter" style="font-style: normal !important;"></i></a></li>
+        <li><a href="{{l?.link_instagram}}" target="_blank"><i class="fa fa-instagram" style="font-style: normal !important;"></i></a></li>
     </ul>
     <!-- /intro-social -->
 

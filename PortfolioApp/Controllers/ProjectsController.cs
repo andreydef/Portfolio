@@ -22,9 +22,9 @@ namespace PortfolioApp.Controllers
                      new Projects
                      {
                          Id = 1,
-                         Title = "my latest works",
+                         Title = "Website Contrast",
                          Description = "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere",
-                         Name_project = "Website Contrast",
+                         Name_project = "Contrast",
                          Desc_proj = "Website",
                          Date_project = new DateTime(2020, 05, 15)
                      },

@@ -14,8 +14,10 @@ import { MyPortfolioComponent } from './my-portfolio/my-portfolio.component';
 import { MyServicesComponent } from './my-services/my-services.component';
 import { StatsComponent } from './stats/stats.component';
 import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { FooterComponent } from './footer/footer.component';
+
 // import { AuthGuard } from './guards/auth.guard';
 
 import { routing } from './app.routing';
@@ -24,6 +26,7 @@ import { routing } from './app.routing';
   declarations: [
     AppComponent,
     HomeComponent,
+    NavMenuComponent,
     AboutComponent,
     LoginComponent,
     ResumeComponent,
@@ -33,8 +36,8 @@ import { routing } from './app.routing';
     MyServicesComponent,
     StatsComponent,
     ContactComponent,
-    FooterComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

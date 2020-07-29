@@ -1,4 +1,3 @@
-import { ProjectsComponent } from './projects/projects.component';
 import { LoginComponent } from './Services/login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -9,7 +8,8 @@ import { ResumeComponent } from './resume/resume.component';
 import { MyServicesComponent } from './my-services/my-services.component';
 import { StatsComponent } from './stats/stats.component';
 import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 const appRoutes: Routes = [
 
@@ -17,6 +17,7 @@ const appRoutes: Routes = [
     path: '',
     component: HomeComponent,
     children: [
+      { path: 'nav-menu', component: NavMenuComponent},
       { path: 'about', component: AboutComponent },
       { path: 'resume', component: ResumeComponent },
       { path: 'portfolio', component: MyPortfolioComponent },

@@ -162,12 +162,14 @@ namespace PortfolioApp.Models
                     Title = "my latest works",
                     Description = "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere",
                     Name_project = "Website Contrast",
+                    Desc_proj = "Website",
                     Date_project = new DateTime(2020, 05, 15)
                 },
                 new Projects
                 {
                     Id = 2,
                     Name_project = "Banking_system",
+                    Desc_proj = "PC program",
                     Date_project = new DateTime(2020, 06, 05)
                 }
             });

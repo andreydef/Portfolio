@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 import { Projects } from '../Models/Main_models/Projects';
 import { ProjectsService } from '../Services/projects/projects.service';
@@ -13,7 +14,8 @@ export class ProjectsComponent implements OnInit {
   project: Projects = new Projects();
   projects: Projects[];
 
-  constructor(private projectsService: ProjectsService) { }
+  constructor(public titleService: Title,
+    private projectsService: ProjectsService) { }
 
   loadProjects() {
     this.projectsService.getProjects()
@@ -22,5 +24,6 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit() {
     this.loadProjects();
+    this.titleService.setTitle('Projects');
   }
 }

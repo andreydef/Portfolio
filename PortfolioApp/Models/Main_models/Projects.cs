@@ -17,6 +17,7 @@ namespace PortfolioApp.Models
         [MaxLength(40)]
         public string Name_project { get; set; }
 
+        [Required]
         [StringLength(maximumLength: 40, ErrorMessage = "Максимальна довжина введеної стрічки - 40 символів")]
         [MaxLength(40)]
         public string Desc_proj { get; set; }
