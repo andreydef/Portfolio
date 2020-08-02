@@ -1,4 +1,3 @@
-import { LoginComponent } from './Services/login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
@@ -10,6 +9,8 @@ import { StatsComponent } from './stats/stats.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
 

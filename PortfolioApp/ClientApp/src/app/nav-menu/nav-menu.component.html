@@ -14,8 +14,27 @@
 
             <nav id="main-nav-wrap">
                 <ul class="main-navigation">
-                    <li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
+                    <li><a class="smoothscroll" href="#intro" title="">Home</a></li>
                     <li><a class="smoothscroll" href="#about" title="">About</a></li>
+                    <li><a class="smoothscroll" href="#resume" title="">Resume</a></li>
+                    <li><a class="smoothscroll" href="#portfolio" title="">Portfolio</a></li>
+                    <li><a class="smoothscroll" href="#services" title="">Services</a></li>
+                    <li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" *ngIf="!userData.isLoggedIn" [routerLink]='["/login"]'>Login</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link" *ngIf="userData.isLoggedIn && userData.role==userRole.Admin" [routerLink]='["/admin-home"]' [routerLink]=''>AdminHome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" *ngIf="userData.isLoggedIn" (click)=logout() [routerLink]=''>Logout</a>
+                    </li>
+                    <li class="nav-item" *ngIf="userData.isLoggedIn">
+                        <a class="nav-link">Welcome <b>{{userData.firstName}}</b> </a>
+                    </li>
+                    <!-- <li class="nav-item" [routerLinkActive]="['link-active']">
+                      <a class="nav-link" [routerLink]="['/projects']">Projects</a>
+                    </li> -->
                 </ul>
             </nav>
         </div>
