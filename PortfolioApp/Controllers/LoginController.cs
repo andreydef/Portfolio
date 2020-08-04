@@ -13,7 +13,7 @@ using System.Text;
 namespace PortfolioApp.Controllers
 {
     [Produces("application/json")]
-    [Route("api/[controller]")]
+    [Route("api/login")]
     public class LoginController : Controller
     {
         private readonly IConfiguration _config;

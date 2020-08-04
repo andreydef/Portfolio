@@ -11,6 +11,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './guards/auth.guard';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 
 const appRoutes: Routes = [
 
@@ -31,8 +33,7 @@ const appRoutes: Routes = [
   // no layout routes
   { path: 'login', component: LoginComponent },
   { path: 'projects', component: ProjectsComponent },
-  // { path: 'user-home', component: UserHomeComponent, canActivate: [AuthGuard] },
-  // { path: 'admin-home', component: AdminHomeComponent, canActivate: [AuthGuard] }
+  { path: 'admin-home', component: AdminHomeComponent, canActivate: [AuthGuard] },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

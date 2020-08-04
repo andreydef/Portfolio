@@ -4,7 +4,7 @@ import { LinksService } from '../Services/links/links.service';
 import { About } from '../Models/Main_models/About';
 import { AboutService } from '../Services/about/about.service';
 
-declare var $: any;
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-home',
@@ -43,7 +43,5 @@ export class HomeComponent implements OnInit {
 
     // FitVids
     $('.fluid-video-wrapper').fitVids();
-
-
   }
 }

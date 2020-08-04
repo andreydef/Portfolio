@@ -5,7 +5,7 @@ using PortfolioApp.Models;
 namespace PortfolioApp.Controllers
 {
     [Produces("application/json")]
-    [Route("api/[controller]")]
+    [Route("api/user")]
     public class UserController : ControllerBase
     {
         [HttpGet]

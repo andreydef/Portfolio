@@ -22,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 // import { AuthGuard } from './guards/auth.guard';
 
 import { routing } from './app.routing';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { routing } from './app.routing';
     StatsComponent,
     ContactComponent,
     ProjectsComponent,
-    FooterComponent
+    FooterComponent,
+    AdminHomeComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
