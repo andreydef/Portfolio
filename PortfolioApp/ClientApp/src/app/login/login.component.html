@@ -1,9 +1,4 @@
 <link rel="stylesheet" type="text/css" href="../../assets/vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../../assets/vendor/animate/animate.css">
-<link rel="stylesheet" type="text/css" href="../../assets/vendor/css-hamburgers/hamburgers.min.css">
-<link rel="stylesheet" type="text/css" href="../../assets/vendor/animsition/css/animsition.min.css">
-<link rel="stylesheet" type="text/css" href="../../assets/vendor/select2/select2.min.css">
-<link rel="stylesheet" type="text/css" href="../../assets/vendor/daterangepicker/daterangepicker.css">
 <link rel="stylesheet" type="text/css" href="../../assets/css/util.css">
 <link rel="stylesheet" type="text/css" href="../../assets/css/login.css">
 
@@ -11,11 +6,10 @@
     <div class="container-login100">
         <div class="wrap-login100">
             <form class="login100-form validate-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                <span class="login100-form-title p-b-26">Welcome</span>
-                <span class="login100-form-title p-b-48"><i class="zmdi zmdi-font"></i></span>
+                <span class="login100-form-title p-b-26">Login</span>
 
-                <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
-                    <input class="input100" type="text" name="username" [ngClass]="{ 'is-invalid': submitted && loginFormControl.username.errors }">
+                <div class="wrap-input100 validate-input" data-validate="Enter username">
+                    <input class="input100" type="text" formControlName="username" name="username"  [ngClass]="{ 'is-invalid': submitted && loginFormControl.username.errors }">
                     <div *ngIf="submitted && loginFormControl.username.errors" class="invalid-feedback">
                         <div *ngIf="loginFormControl.username.errors.required">Username is required</div>
                     </div>
@@ -23,41 +17,34 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Enter password">
-                    <span class="btn-show-pass"><i class="zmdi zmdi-eye"></i></span>
-                    <input class="input100" type="password" name="pass" [ngClass]="{ 'is-invalid': submitted && loginFormControl.password.errors }">
+                    <input class="input100" type="password" formControlName="password" name="pass"  [ngClass]="{ 'is-invalid': submitted && loginFormControl.password.errors }">
                     <div *ngIf="submitted && loginFormControl.password.errors" class="invalid-feedback">
                         <div *ngIf="loginFormControl.password.errors.required">Password is required</div>
                     </div>
                     <span class="focus-input100" data-placeholder="Password"></span>
                 </div>
 
-                <div class="container-login100-form-btn">
-                    <div class="wrap-login100-form-btn">
-                        <div class="login100-form-bgbtn"></div>
-                        <!-- <button [disabled]="loading" class="login100-form-btn">Login</button> -->
-                    </div>
+                <div *ngIf="loginForm.errors?.invalidLogin" class="alert alert-danger mt-3 mb-0">
+                  Username or Password is incorrect.
                 </div>
 
-                <button [disabled]="loading" class="btn btn-primary">
-                  <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Login
-                </button>
-
+                <div class="container-login100-form-btn">
+					      	<div class="wrap-login100-form-btn">
+							     <div class="login100-form-bgbtn"></div>
+						    	 <button [disabled]="loading" class="login100-form-btn">Login</button>
+						    </div>
+               </div>
                 <div class="text-center p-t-115">
-                    <span class="txt1">Go to home page?  </span>
-                    <a class="txt2" href="/">Home</a>
+                  <span class="txt1">Go to home page?  </span>
+                  <a class="txt2" href="/">Home</a>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-<div id="dropDownSelect1"></div>
-
 <script src="../../assets/vendor/jquery/jquery-3.2.1.min.js"></script>
-<script src="../../assets/vendor/animsition/js/animsition.min.js"></script>
 <script src="../../assets/vendor/bootstrap/js/popper.js"></script>
-<script src="../../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="../../assets/vendor/select2/select2.min.js"></script>
 <script src="../../assets/vendor/daterangepicker/moment.min.js"></script>
-<script src="../../assets/vendor/daterangepicker/daterangepicker.js"></script>
 <script src="../../assets/vendor/countdowntime/countdowntime.js"></script>

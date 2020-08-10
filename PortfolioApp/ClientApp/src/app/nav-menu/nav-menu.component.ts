@@ -40,8 +40,8 @@ export class NavMenuComponent implements OnInit  {
   /* Navigation Menu
    ------------------------------------------------------ */
 
-   let toggleButton = $('.menu-toggle');
-   let nav = $('.main-navigation');
+   const toggleButton = $('.menu-toggle');
+   const nav = $('.main-navigation');
 
    // toggle button
    toggleButton.on('click', function(e) {
@@ -66,7 +66,7 @@ export class NavMenuComponent implements OnInit  {
 
       e.preventDefault();
 
-      let target = this.hash,
+      const target = this.hash,
        $target = $(target);
 
        $('html, body').stop().animate({

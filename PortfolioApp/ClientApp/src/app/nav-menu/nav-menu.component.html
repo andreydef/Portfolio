@@ -4,14 +4,11 @@
     ================================================== -->
 <header>
     <div class="row">
-
         <div class="top-bar">
             <a class="menu-toggle" href="#"><span>Menu</span></a>
-
             <div class="logo">
                 <a href="/">Portfolio</a>
             </div>
-
             <nav id="main-nav-wrap">
                 <ul class="main-navigation">
                     <li><a class="smoothscroll" href="#intro" title="">Home</a></li>
@@ -23,14 +20,11 @@
                     <li class="nav-item">
                         <a class="nav-link" *ngIf="!userData.isLoggedIn" [routerLink]='["/login"]'>Login</a>
                     </li>
-                    <li class="nav-item" >
+                    <li class="nav-item">
                         <a class="nav-link" *ngIf="userData.isLoggedIn && userData.role==userRole.Admin" [routerLink]='["/admin-home"]' [routerLink]=''>AdminHome</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" *ngIf="userData.isLoggedIn" (click)=logout() [routerLink]=''>Logout</a>
-                    </li>
-                    <li class="nav-item" *ngIf="userData.isLoggedIn">
-                        <a class="nav-link">Welcome <b>{{userData.firstName}}</b> </a>
                     </li>
                     <!-- <li class="nav-item" [routerLinkActive]="['link-active']">
                       <a class="nav-link" [routerLink]="['/projects']">Projects</a>
@@ -39,7 +33,6 @@
             </nav>
         </div>
         <!-- /top-bar -->
-
     </div>
     <!-- /row -->
 </header>
