@@ -19,7 +19,7 @@ namespace PortfolioApp.Controllers
         private readonly IConfiguration _config;
 
         private List<User> appUsers = new List<User>
-        { 
+        {
             new User { FirstName = "Admin", UserName = "admin", Password = "pass", UserType = "Admin" },
             new User { FirstName = "Andriy", UserName = "andreydef", Password = "1234", UserType = "User" }
         };

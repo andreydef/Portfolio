@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
             else {
                 $(this).removeClass('has-val');
             }
-        })    
+        })
     });
 
     /*==================================================================
@@ -88,7 +88,7 @@ export class LoginComponent implements OnInit {
       var thisAlert = $(input).parent();
       $(thisAlert).removeClass('alert-validate');
     }
-    
+
     /*==================================================================
     [ Show pass ]*/
     var showPass = 0;

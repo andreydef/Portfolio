@@ -9,7 +9,7 @@
                 <span class="login100-form-title p-b-26">Login</span>
 
                 <div class="wrap-input100 validate-input" data-validate="Enter username">
-                    <input class="input100" type="text" formControlName="username" name="username"  [ngClass]="{ 'is-invalid': submitted && loginFormControl.username.errors }">
+                    <input class="input100" type="text" formControlName="username" name="username" [ngClass]="{ 'is-invalid': submitted && loginFormControl.username.errors }">
                     <div *ngIf="submitted && loginFormControl.username.errors" class="invalid-feedback">
                         <div *ngIf="loginFormControl.username.errors.required">Username is required</div>
                     </div>
@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Enter password">
-                    <input class="input100" type="password" formControlName="password" name="pass"  [ngClass]="{ 'is-invalid': submitted && loginFormControl.password.errors }">
+                    <input class="input100" type="password" formControlName="password" name="pass" [ngClass]="{ 'is-invalid': submitted && loginFormControl.password.errors }">
                     <div *ngIf="submitted && loginFormControl.password.errors" class="invalid-feedback">
                         <div *ngIf="loginFormControl.password.errors.required">Password is required</div>
                     </div>
@@ -25,18 +25,18 @@
                 </div>
 
                 <div *ngIf="loginForm.errors?.invalidLogin" class="alert alert-danger mt-3 mb-0">
-                  Username or Password is incorrect.
+                    Username or Password is incorrect.
                 </div>
 
                 <div class="container-login100-form-btn">
-					      	<div class="wrap-login100-form-btn">
-							     <div class="login100-form-bgbtn"></div>
-						    	 <button [disabled]="loading" class="login100-form-btn">Login</button>
-						    </div>
-               </div>
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button [disabled]="loading" class="login100-form-btn">Login</button>
+                    </div>
+                </div>
                 <div class="text-center p-t-115">
-                  <span class="txt1">Go to home page?  </span>
-                  <a class="txt2" href="/">Home</a>
+                    <span class="txt1">Go to home page?  </span>
+                    <a class="txt2" href="/">Home</a>
                 </div>
             </form>
         </div>
