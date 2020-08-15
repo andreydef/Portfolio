@@ -33,7 +33,14 @@ const appRoutes: Routes = [
   // no layout routes
   { path: 'login', component: LoginComponent },
   { path: 'projects', component: ProjectsComponent },
-  { path: 'admin-home', component: AdminHomeComponent, canActivate: [ AdminGuard ] },
+  {
+    path: 'admin-home',
+    component: AdminHomeComponent,
+    canActivate: [AdminGuard],
+    children: [
+      // { path: 'home-admin', component: HomeAdminComponent}
+    ]
+  },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

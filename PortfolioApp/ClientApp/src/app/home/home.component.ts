@@ -4,8 +4,6 @@ import { LinksService } from '../Services/links/links.service';
 import { About } from '../Models/Main_models/About';
 import { AboutService } from '../Services/about/about.service';
 
-import * as $ from 'jquery';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

@@ -34,6 +34,8 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
     this.loadAbouts(); // download data before the start of server
     this.loadLanguages();
+
+
   }
 
   // cancel() {

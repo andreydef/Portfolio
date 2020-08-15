@@ -21,10 +21,10 @@
                         <a class="nav-link" *ngIf="!userData.isLoggedIn" [routerLink]='["/login"]'>Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" *ngIf="userData.isLoggedIn && userData.role==userRole.Admin" [routerLink]='["/admin-home"]' [routerLink]=''>AdminHome</a>
+                        <a class="nav-link" *ngIf="userData.isLoggedIn && userData.role==userRole.Admin" [routerLink]='["/admin-home"]' target="_blank">AdminHome</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" *ngIf="userData.isLoggedIn" (click)=logout() [routerLink]=''>Logout</a>
+                        <a class="nav-link" *ngIf="userData.isLoggedIn" (click)=logout() target="_blank">Logout</a>
                     </li>
                     <!-- <li class="nav-item" [routerLinkActive]="['link-active']">
                       <a class="nav-link" [routerLink]="['/projects']">Projects</a>
