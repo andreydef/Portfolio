@@ -23,6 +23,8 @@ import { LoginComponent } from './login/login.component';
 
 import { routing } from './app.routing';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
     ContactComponent,
     ProjectsComponent,
     FooterComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    HomeAdminComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

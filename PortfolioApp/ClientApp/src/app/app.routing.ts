@@ -1,3 +1,5 @@
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
@@ -13,6 +15,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { LoginComponent } from './login/login.component';
 import { AdminGuard } from './guards/admin.guard';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { NavbarAdminComponent } from './admin/navbar-admin/navbar-admin.component';
 
 const appRoutes: Routes = [
 
@@ -37,13 +40,14 @@ const appRoutes: Routes = [
     path: 'admin-home',
     component: AdminHomeComponent,
     canActivate: [AdminGuard],
+    pathMatch: 'full',
     children: [
-      // { path: 'home-admin', component: HomeAdminComponent}
+      { path: 'home-admin', component: HomeAdminComponent }
     ]
   },
 
   // otherwise redirect to home
-  { path: '**', redirectTo: '' }
+  { path: '**', component: PagenotfoundComponent }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
