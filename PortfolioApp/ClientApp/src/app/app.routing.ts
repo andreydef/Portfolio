@@ -15,7 +15,6 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { LoginComponent } from './login/login.component';
 import { AdminGuard } from './guards/admin.guard';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
-import { NavbarAdminComponent } from './admin/navbar-admin/navbar-admin.component';
 
 const appRoutes: Routes = [
 
@@ -36,15 +35,10 @@ const appRoutes: Routes = [
   // no layout routes
   { path: 'login', component: LoginComponent },
   { path: 'projects', component: ProjectsComponent },
-  {
-    path: 'admin-home',
-    component: AdminHomeComponent,
-    canActivate: [AdminGuard],
-    pathMatch: 'full',
-    children: [
-      { path: 'home-admin', component: HomeAdminComponent }
-    ]
-  },
+
+  // admin routings
+  { path: 'admin-home', component: AdminHomeComponent, canActivate: [ AdminGuard ] },
+  { path: 'home-admin', component: HomeAdminComponent, canActivate: [ AdminGuard ] },
 
   // otherwise redirect to home
   { path: '**', component: PagenotfoundComponent }

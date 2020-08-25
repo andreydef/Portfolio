@@ -17,7 +17,7 @@
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#" style="text-decoration: none;">
           Toggle sidebar
         </button>
-        <a class="btn btn-link btn-sm" href="/" style="width: 100px; font-size: 16px; text-decoration: none;">
+        <a class="btn btn-link btn-sm" href="/" style="font-size: 16px; text-decoration: none;">
           Back to site
         </a>
         <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -32,7 +32,7 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <a class="nav-link" href="/admin-home">
+                        <a class="nav-link" routerLink="/admin-home">
                             <div class="sb-nav-link-icon"></div>
                             <!-- <i class="fas fa-tachometer-alt"></i> -->
                             Dashboard
@@ -40,7 +40,7 @@
                     </div>
                     <div class="sb-sidenav-menu-heading">Site content</div>
                     <div class="nav">
-                        <a class="nav-link" [routerLink]="['/admin-home/home-admin']">
+                        <a class="nav-link" href="/home-admin">
                             <div class="sb-nav-link-icon"></div>
                             Home
                         </a>
@@ -90,16 +90,8 @@
             </nav>
         </div>
         <div id="layoutSidenav_content">
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Portfolio 2020</div>
-                        <div>
-                            <a href="/">Portfolio</a> &middot;
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <h1>Dashboard</h1>
+            <app-admin-footer></app-admin-footer>
         </div>
     </div>
 </body>
