@@ -38,7 +38,7 @@ const appRoutes: Routes = [
 
   // admin routings
   { path: 'admin-home', component: AdminHomeComponent, canActivate: [ AdminGuard ] },
-  { path: 'home-admin', component: HomeAdminComponent, canActivate: [ AdminGuard ] },
+  { path: 'home-admin', component: HomeAdminComponent, canActivate: [AdminGuard] },
 
   // otherwise redirect to home
   { path: '**', component: PagenotfoundComponent }

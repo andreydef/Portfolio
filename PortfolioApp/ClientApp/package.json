@@ -4,7 +4,7 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "build": "ng build",
+        "build": "ng build --prod --deleteOutputPath=false",
         "build:ssr": "ng run PortfolioApp:server:dev",
         "test": "ng test",
         "lint": "ng lint",

@@ -58,36 +58,11 @@ namespace PortfolioApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.About.Add(about);
+                db.Update(about);
                 db.SaveChanges();
                 return Ok(about);
             }
             return BadRequest(ModelState);
         }
-
-        //[HttpPost]
-        //public IActionResult Post(About about)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.About.Add(about);
-        //        db.SaveChanges();
-        //        return Ok(about);
-        //    }
-        //    return BadRequest(ModelState);
-        //}
-
-        //[HttpDelete("{id}")]
-        //public IActionResult Delete(int id)
-        //{
-        //    About about = db.About.FirstOrDefault(x => x.Id == id);
-
-        //    if (about != null)
-        //    {
-        //        db.About.Remove(about);
-        //        db.SaveChanges();
-        //    }
-        //    return Ok(about);
-        //}
     }
 }
