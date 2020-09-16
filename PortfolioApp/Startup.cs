@@ -114,7 +114,7 @@ namespace PortfolioApp
                 spa.Options.SourcePath = "ClientApp";
                 if (env.IsDevelopment())
                 {
-                    spa.Options.StartupTimeout = new TimeSpan(0, 5, 0);
+                    spa.Options.StartupTimeout = new TimeSpan(0, 10, 0);
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
