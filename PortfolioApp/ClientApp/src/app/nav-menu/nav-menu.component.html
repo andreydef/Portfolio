@@ -17,18 +17,9 @@
                     <li><a class="smoothscroll" href="#portfolio" title="">Portfolio</a></li>
                     <li><a class="smoothscroll" href="#services" title="">Services</a></li>
                     <li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" *ngIf="!userData.isLoggedIn" [routerLink]='["/login"]'>Login</a>
+                    <li class="nav-item" [routerLinkActive]="['link-active']">
+                        <a class="nav-link" target="_blank" [routerLink]="['/projects']">Projects</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" *ngIf="userData.isLoggedIn && userData.role==userRole.Admin" [routerLink]='["/admin-home"]' target="_blank">AdminHome</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" *ngIf="userData.isLoggedIn" (click)=logout() target="_blank">Logout</a>
-                    </li>
-                    <!-- <li class="nav-item" [routerLinkActive]="['link-active']">
-                      <a class="nav-link" [routerLink]="['/projects']">Projects</a>
-                    </li> -->
                 </ul>
             </nav>
         </div>

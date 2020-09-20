@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Languages } from '../../Models/Main_models/Languages';
+import { Languages } from '../../Models/Languages';
 
 @Injectable()
 export class LanguagesService {

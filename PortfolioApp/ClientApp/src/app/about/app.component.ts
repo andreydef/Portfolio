@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AboutService } from '../Services/about/about.service';
-import { About } from '../Models/Main_models/About';
-import { Languages } from '../Models/Main_models/Languages';
+import { About } from '../Models/About';
+import { Languages } from '../Models/Languages';
 import { LanguagesService } from '../Services/lang/languages.service';
 
 @Component({
@@ -34,24 +34,5 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
     this.loadAbouts(); // download data before the start of server
     this.loadLanguages();
-
-
   }
-
-  // cancel() {
-  //   this.about = new About();
-  // }
-
-  // save data
-  // save() {
-  //   if (this.about.id != null) {
-  //     this.aboutService.updateAbout(this.about)
-  //       .subscribe((data => this.loadAbouts()));
-  //   }
-  //   this.cancel();
-  // }
-
-  // editAbout(a: About) {
-  //   this.about = a;
-  // }
 }

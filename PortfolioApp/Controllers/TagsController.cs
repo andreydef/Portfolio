@@ -49,17 +49,5 @@ namespace PortfolioApp.Controllers
             Tags tags = db.Tags.FirstOrDefault(x => x.Id == id);
             return tags;
         }
-
-        [HttpPut]
-        public IActionResult Put(Tags tags)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Tags.Add(tags);
-                db.SaveChanges();
-                return Ok(tags);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

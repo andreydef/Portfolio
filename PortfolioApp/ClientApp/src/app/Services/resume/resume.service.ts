@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Resume } from '../../Models/Main_models/Resume';
+import { Resume } from '../../Models/Resume';
 
 @Injectable()
 export class ResumeService {

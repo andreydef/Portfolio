@@ -17,15 +17,10 @@ import { ProjectsComponent } from './projects/projects.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { LoginComponent } from './login/login.component';
-
 // import { AuthGuard } from './guards/auth.guard';
 
 import { routing } from './app.routing';
-import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
-import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { AdminFooterComponent } from './admin/admin-footer/admin-footer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +28,6 @@ import { AdminFooterComponent } from './admin/admin-footer/admin-footer.componen
     HomeComponent,
     NavMenuComponent,
     AboutComponent,
-    LoginComponent,
     ResumeComponent,
     WorkExperienceComponent,
     EducationComponent,
@@ -43,10 +37,7 @@ import { AdminFooterComponent } from './admin/admin-footer/admin-footer.componen
     ContactComponent,
     ProjectsComponent,
     FooterComponent,
-    AdminHomeComponent,
-    HomeAdminComponent,
     PagenotfoundComponent,
-    AdminFooterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

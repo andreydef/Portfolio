@@ -57,17 +57,5 @@ namespace PortfolioApp.Controllers
             Info_jobs info_jobs = db.Info_jobs.FirstOrDefault(x => x.Id == id);
             return info_jobs;
         }
-
-        [HttpPut]
-        public IActionResult Put(Info_jobs info_jobs)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Info_jobs.Add(info_jobs);
-                db.SaveChanges();
-                return Ok(info_jobs);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

@@ -46,17 +46,5 @@ namespace PortfolioApp.Controllers
             Links links = db.Links.FirstOrDefault(x => x.Id == id);
             return links;
         }
-
-        [HttpPut]
-        public IActionResult Put(Links links)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Links.Add(links);
-                db.SaveChanges();
-                return Ok(links);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

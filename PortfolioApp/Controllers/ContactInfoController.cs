@@ -59,17 +59,5 @@ namespace PortfolioApp.Controllers
             Contact_info contact = db.Contact_info.FirstOrDefault(x => x.Id == id);
             return contact;
         }
-
-        [HttpPut]
-        public IActionResult Put(Contact_info contact)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Contact_info.Add(contact);
-                db.SaveChanges();
-                return Ok(contact);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

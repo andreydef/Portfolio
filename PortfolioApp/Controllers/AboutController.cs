@@ -52,17 +52,5 @@ namespace PortfolioApp.Controllers
             About about = db.About.FirstOrDefault(x => x.Id == id);
             return about;
         }
-
-        [HttpPut]
-        public IActionResult Put(About about)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Update(about);
-                db.SaveChanges();
-                return Ok(about);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

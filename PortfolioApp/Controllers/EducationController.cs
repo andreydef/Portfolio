@@ -58,17 +58,5 @@ namespace PortfolioApp.Controllers
             Education education = db.Education.FirstOrDefault(x => x.Id == id);
             return education;
         }
-
-        [HttpPut]
-        public IActionResult Put(Education education)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Education.Add(education);
-                db.SaveChanges();
-                return Ok(education);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

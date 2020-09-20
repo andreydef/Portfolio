@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ServicesService } from '../Services/services/services.service';
-import { Services } from '../Models/Main_models/Services';
-import { ServiceInfo } from '../Models/Main_models/Service_info';
+import { Services } from '../Models/Services';
+import { ServiceInfo } from '../Models/Service_info';
 
 @Component({
   selector: 'app-my-services',

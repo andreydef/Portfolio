@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Links } from './../../Models/Main_models/Links';
+import { Links } from './../../Models/Links';
 
 @Injectable()
 export class LinksService {

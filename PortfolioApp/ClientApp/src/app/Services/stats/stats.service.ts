@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Stats } from '../../Models/Main_models/Stats';
+import { Stats } from '../../Models/Stats';
 
 @Injectable()
 export class StatsService {

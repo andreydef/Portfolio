@@ -40,17 +40,5 @@ namespace PortfolioApp.Controllers
             Portfolio portfolio = db.Portfolio.FirstOrDefault(x => x.Id == id);
             return portfolio;
         }
-
-        [HttpPut]
-        public IActionResult Put(Portfolio portfolio)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Portfolio.Add(portfolio);
-                db.SaveChanges();
-                return Ok(portfolio);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

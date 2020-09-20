@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Portfolio } from '../../Models/Main_models/Portfolio';
-import { Projects } from '../../Models/Main_models/Projects';
+import { Portfolio } from '../../Models/Portfolio';
+import { Projects } from '../../Models/Projects';
 
 @Injectable()
 export class MyPortfolioService {

@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
@@ -6,11 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using PortfolioApp.Models;
 using System;
-using System.Text;
 
 namespace PortfolioApp
 {
@@ -36,31 +33,6 @@ namespace PortfolioApp
                 configuration.RootPath = "ClientApp/dist";
             });
 
-            // adding authentication
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
-            {
-                options.RequireHttpsMetadata = false;
-                options.SaveToken = true;
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = Configuration["Jwt:Issuer"],
-                    ValidAudience = Configuration["Jwt:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:SecretKey"])),
-                    ClockSkew = TimeSpan.Zero
-                };
-                services.AddCors();
-            });
-
-            services.AddAuthorization(config =>
-            {
-                config.AddPolicy(Roles.Admin, Roles.AdminPolicy());
-                config.AddPolicy(Roles.User, Roles.UserPolicy());
-            });
-
             // add Swagger
             services.AddSwaggerGen(options =>
             {
@@ -84,11 +56,6 @@ namespace PortfolioApp
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
-            // use authentication
-            app.UseAuthentication();
-            app.UseAuthorization();
-
 
             if (!env.IsDevelopment())
             {

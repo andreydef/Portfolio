@@ -60,17 +60,5 @@ namespace PortfolioApp.Controllers
             Service_info service = db.Service_info.FirstOrDefault(x => x.Id == id);
             return service;
         }
-
-        [HttpPut]
-        public IActionResult Put(Service_info service)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Service_info.Add(service);
-                db.SaveChanges();
-                return Ok(service);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

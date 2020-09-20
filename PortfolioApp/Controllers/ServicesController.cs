@@ -53,17 +53,5 @@ namespace PortfolioApp.Controllers
             Services service = db.Services.FirstOrDefault(x => x.Id == id);
             return service;
         }
-
-        [HttpPut]
-        public IActionResult Put(Services service)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Services.Add(service);
-                db.SaveChanges();
-                return Ok(service);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

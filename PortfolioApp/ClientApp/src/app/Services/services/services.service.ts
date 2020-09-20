@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Services } from '../../Models/Main_models/Services';
-import { ServiceInfo } from '../../Models/Main_models/Service_info';
+import { Services } from '../../Models/Services';
+import { ServiceInfo } from '../../Models/Service_info';
 
 @Injectable()
 export class ServicesService {

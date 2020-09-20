@@ -45,17 +45,5 @@ namespace PortfolioApp.Controllers
             Resume resume = db.Resume.FirstOrDefault(x => x.Id == id);
             return resume;
         }
-
-        [HttpPut]
-        public IActionResult Put(Resume resume)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Resume.Add(resume);
-                db.SaveChanges();
-                return Ok(resume);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { About } from '../../Models/Main_models/About';
+import { About } from '../../Models/About';
 
 @Injectable()
 export class AboutService {

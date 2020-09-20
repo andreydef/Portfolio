@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../Models/Auth/User';
-import { UserRole } from '../Models/Auth/Roles';
-import { AuthService } from '../Services/auth/auth.service';
 
 import * as $ from 'jquery';
 
@@ -12,14 +9,8 @@ import * as $ from 'jquery';
 })
 export class NavMenuComponent implements OnInit  {
   isExpanded = false;
-  userDataSubscription: any;
-  userData = new User();
-  userRole = UserRole;
 
-  constructor(private authService: AuthService) {
-    this.userDataSubscription = this.authService.userData.asObservable().subscribe(data => {
-      this.userData = data;
-    });
+  constructor() {
   }
 
   collapse() {
@@ -28,10 +19,6 @@ export class NavMenuComponent implements OnInit  {
 
   toggle() {
     this.isExpanded = !this.isExpanded;
-  }
-
-  logout() {
-    this.authService.logout();
   }
 
   ngOnInit() {

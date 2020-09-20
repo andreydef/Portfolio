@@ -55,17 +55,5 @@ namespace PortfolioApp.Controllers
             Projects proj = db.Projects.FirstOrDefault(x => x.Id == id);
             return proj;
         }
-
-        [HttpPut]
-        public IActionResult Put(Projects proj)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Projects.Add(proj);
-                db.SaveChanges();
-                return Ok(proj);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

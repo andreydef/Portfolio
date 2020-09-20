@@ -81,17 +81,5 @@ namespace PortfolioApp.Controllers
             Stats stats = db.Stats.FirstOrDefault(x => x.Id == id);
             return stats;
         }
-
-        [HttpPut]
-        public IActionResult Put(Stats stats)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Stats.Add(stats);
-                db.SaveChanges();
-                return Ok(stats);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

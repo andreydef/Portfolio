@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Links } from '../Models/Main_models/Links';
+import { Links } from '../Models/Links';
 import { LinksService } from '../Services/links/links.service';
-import { About } from '../Models/Main_models/About';
+import { About } from '../Models/About';
 import { AboutService } from '../Services/about/about.service';
 
 @Component({

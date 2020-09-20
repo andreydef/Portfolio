@@ -69,17 +69,5 @@ namespace PortfolioApp.Controllers
             Languages lang = db.Languages.FirstOrDefault(x => x.Id == id);
             return lang;
         }
-
-        [HttpPut]
-        public IActionResult Put(Languages lang)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Languages.Add(lang);
-                db.SaveChanges();
-                return Ok(lang);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

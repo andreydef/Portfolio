@@ -45,17 +45,5 @@ namespace PortfolioApp.Controllers
             Main_info main_info = db.Main_info.FirstOrDefault(x => x.Id == id);
             return main_info;
         }
-
-        [HttpPut]
-        public IActionResult Put(Main_info main_info)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Main_info.Add(main_info);
-                db.SaveChanges();
-                return Ok(main_info);
-            }
-            return BadRequest(ModelState);
-        }
     }
 }

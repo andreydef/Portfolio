@@ -1,5 +1,4 @@
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
@@ -11,10 +10,6 @@ import { StatsComponent } from './stats/stats.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-
-import { LoginComponent } from './login/login.component';
-import { AdminGuard } from './guards/admin.guard';
-import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 
 const appRoutes: Routes = [
 
@@ -33,12 +28,7 @@ const appRoutes: Routes = [
   },
 
   // no layout routes
-  { path: 'login', component: LoginComponent },
   { path: 'projects', component: ProjectsComponent },
-
-  // admin routings
-  { path: 'admin-home', component: AdminHomeComponent, canActivate: [ AdminGuard ] },
-  { path: 'home-admin', component: HomeAdminComponent, canActivate: [AdminGuard] },
 
   // otherwise redirect to home
   { path: '**', component: PagenotfoundComponent }
