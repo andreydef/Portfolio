@@ -21,7 +21,6 @@ namespace PortfolioApp.Models
         public DbSet<Main_info> Main_info { get; set; }
         public DbSet<Projects> Projects { get; set; }
         public DbSet<Services> Services { get; set; }
-        public DbSet<Info_jobs> Info_jobs { get; set; }
         public DbSet<Contact_me> Contact_me { get; set; }
         public DbSet<Contact_info> Contact_info { get; set; }
         public DbSet<Portfolio> Portfolio { get; set; }
@@ -188,27 +187,6 @@ namespace PortfolioApp.Models
                     Id = 2,
                     Title_service = "Web Development",
                     Description = "Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do."
-                }
-            });
-            modelBuilder.Entity<Info_jobs>().HasData(new Info_jobs[]
-            {
-                new Info_jobs
-                {
-                    Id = 1,
-                    Numbers = 1500,
-                    Title = "PROJECTS COMPLETED"
-                },
-                new Info_jobs
-                {
-                    Id = 2,
-                    Numbers = 900,
-                    Title = "HAPPY CLIENTS"
-                },
-                new Info_jobs
-                {
-                    Id = 3,
-                    Numbers = 200,
-                    Title = "AWARDS RECEIVED"
                 }
             });
             modelBuilder.Entity<Contact_me>().HasData(new Contact_me[]

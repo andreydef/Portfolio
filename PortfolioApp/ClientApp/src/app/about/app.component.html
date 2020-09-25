@@ -32,11 +32,11 @@
                 </li>
                 <li>
                     <strong>Website:</strong>
-                    <span>{{a?.website}}</span>
+                    <a href="{{a?.website}}">Facebook</a>
                 </li>
                 <li>
                     <strong>Email:</strong>
-                    <span>{{a?.email}}</span>
+                    <a href="mailto: {{a?.email}}">Email</a>
                 </li>
             </ul>
             <!-- /info-list -->
@@ -63,78 +63,3 @@
     </div>
 </section>
 <!-- /process-->
-
-<!-- <h1>Список Abouts</h1>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <td>Title</td>
-            <td>ImageName</td>
-            <td>Description</td>
-            <td>Profile_desc</td>
-            <td>FullName</td>
-            <td>Birth_date</td>
-            <td>Job</td>
-            <td>Website</td>
-            <td>Email</td>
-            <td>Skills_desc</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let a of abouts">
-            <ng-template [ngIf]="about?.id != a.id" [ngIfElse]="edit">
-                <td>{{a?.title}}</td>
-                <td>{{a?.imageName}}</td>
-                <td>{{a?.description}}</td>
-                <td>{{a?.profile_desc}}</td>
-                <td>{{a?.fullname}}</td>
-                <td>{{a?.birth_date}}</td>
-                <td>{{a?.job}}</td>
-                <td>{{a?.website}}</td>
-                <td>{{a?.email}}</td>
-                <td>{{a?.skills_desc}}</td>
-                <!-- <td>
-                    <button class="btn btn-primary" (click)="editAbout(a)">Змінити</button>
-                </td>
-            </ng-template>
-        </tr>
-    </tbody>
-</table> -->
-
-<!-- template for editing -->
-<!-- <ng-template #edit>
-    <td>
-        <input type="text" [(ngModel)]="about.title" class="form-control" />
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="about.imageName" class="form-control" />
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="about.description" class="form-control" />
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="about.profile_desc" class="form-control" />
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="about.fullname" class="form-control" />
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="about.birth_date" class="form-control" />
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="about.job" class="form-control" />
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="about.website" class="form-control" />
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="about.email" class="form-control" />
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="about.skills_desc" class="form-control" />
-    </td>
-    <!-- <td>
-        <input type="button" value="Save" (click)="save()" class="btn btn-sm btn-success" />
-        <input type="button" value="Cancel" (click)="cancel()" class="btn btn-sm btn-warning" />
-    </td>
-</ng-template> -->

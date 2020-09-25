@@ -5,7 +5,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/app.component';
 import { MyPortfolioComponent } from './my-portfolio/my-portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
-import { MyServicesComponent } from './my-services/my-services.component';
 import { StatsComponent } from './stats/stats.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -21,7 +20,6 @@ const appRoutes: Routes = [
       { path: 'about', component: AboutComponent },
       { path: 'resume', component: ResumeComponent },
       { path: 'portfolio', component: MyPortfolioComponent },
-      { path: 'services', component: MyServicesComponent },
       { path: 'stats', component: StatsComponent },
       { path: 'contact', component: ContactComponent }
     ]

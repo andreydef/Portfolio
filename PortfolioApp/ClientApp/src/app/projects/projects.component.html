@@ -1,11 +1,15 @@
-<div class="offset"></div>
+<div class="offset">
+</div>
+
+<header>
+    <app-header></app-header>
+</header>
+
 <div>
     <div class="light-wrapper" *ngFor="let p of projects">
         <div class="container inner">
             <div class="basic-slider">
-                <div class="item"><img src="../../assets/images/portfolio/bs1.jpg" alt="" /> </div>
-                <!-- <div class="item"><img src="../../assets/images/portfolio/bs2.jpg" alt="" /> </div> -->
-                <!-- <div class="item"><img src="../../assets/images/portfolio/bs3.jpg" alt="" /> </div> -->
+                <div class="item"><img src="{{p?.imageName}}" style="margin-top: 80px;" alt="" /> </div>
             </div>
             <!-- /.basic-slider -->
 
@@ -13,15 +17,6 @@
             <h2 class="post-title">{{p?.title}}</h2>
             <div class="meta"><span class="date">{{p?.date_project | date: 'dd MMM yyyy'}}</span> / <span>{{p?.desc_proj}}</span></div>
             <p>{{p?.description}}</p>
-        </div>
-    </div>
-
-    <!-- /.light-wrapper -->
-    <div class="dark-wrapper">
-        <div class="container inner2 navigation">
-            <a href="#" class="btn pull-left" title="Back">Back to Portfolio</a>
-            <a href="#" class="btn pull-right" title="Next">Next Post</a>
-            <a href="#" class="btn pull-right" title="Previous">Prev Post</a>
         </div>
     </div>
 </div>

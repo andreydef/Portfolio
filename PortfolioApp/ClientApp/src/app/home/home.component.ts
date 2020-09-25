@@ -4,6 +4,8 @@ import { LinksService } from '../Services/links/links.service';
 import { About } from '../Models/About';
 import { AboutService } from '../Services/about/about.service';
 
+import * as $ from 'jquery';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -33,5 +35,19 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.loadLinks();
     this.loadAbouts();
+
+    /*---------------------------------------------------- */
+    /* Smooth Scrolling
+  	------------------------------------------------------ */
+    $('.smoothscroll').on('click', function (e) {
+      e.preventDefault();
+      const target = this.hash,
+       $target = $(target);
+       $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+       }, 800, 'swing', function () {
+         window.location.hash = target;
+       });
+     });
   }
 }

@@ -56,9 +56,6 @@
 
     <div class="row contact-info">
         <div class="col-four tab-full" *ngFor="let info of contacts_info">
-            <div class="icon">
-                <img src="{{info?.imageName}}" alt="" width="42px" height="42px" style="background-color: white;">
-            </div>
             <h5>{{info?.title}}</h5>
             <p>{{info?.short_desc}}</p>
         </div>

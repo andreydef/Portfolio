@@ -10,17 +10,15 @@ import { ResumeComponent } from './resume/resume.component';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
 import { EducationComponent } from './education/education.component';
 import { MyPortfolioComponent } from './my-portfolio/my-portfolio.component';
-import { MyServicesComponent } from './my-services/my-services.component';
 import { StatsComponent } from './stats/stats.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { FooterComponent } from './footer/footer.component';
 
-// import { AuthGuard } from './guards/auth.guard';
-
 import { routing } from './app.routing';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +30,12 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     WorkExperienceComponent,
     EducationComponent,
     MyPortfolioComponent,
-    MyServicesComponent,
     StatsComponent,
     ContactComponent,
     ProjectsComponent,
     FooterComponent,
     PagenotfoundComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
