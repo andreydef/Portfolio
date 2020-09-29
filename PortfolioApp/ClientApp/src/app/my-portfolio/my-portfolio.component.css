@@ -118,6 +118,12 @@
     }
 }
 
+@media only screen and (max-width:599px) {
+    #portfolio .folio-item {
+        margin-right: 20px;
+    }
+}
+
 
 /**
 * Popup Modal - (_layout.scss)
